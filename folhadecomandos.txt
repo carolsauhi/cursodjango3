@@ -1,0 +1,28 @@
+Ativar virtual env:
+
+*Para Windows:
+cd projeto
+cd venv
+cd Scripts
+activate
+
+Para Linux:
+. venv/bin/activate
+
+Criar projeto Django
+django-admin startproject blog
+
+Rodar o projeto Django
+python manage.py runserver
+
+Parar o server
+ctrl + c
+
+Criar Tabelas no banco de dados
+python manage.py migrate
+
+Criar superusuário
+python manage.py createsuperuser
+
+Criar app
+python manage.py  startapp website
