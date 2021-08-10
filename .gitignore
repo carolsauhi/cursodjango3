@@ -1,1 +1,6 @@
 venv
+media
+.vscode/
+**/__pycache__
+blog/blog/__pycache__
+blog/website/__pycache__
