@@ -1,13 +1,13 @@
 from pathlib import Path
+from decouple import config, Csv
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-e32!!+*7c2gkyh8a#4%thhj1!i7s8-mz2*+8n1m_6^r-c0i^96'
+DEBUG = config('DEBUG', default=False, cast=bool)
+SECRET_KEY = config('SECRET_KEY')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
-DEBUG = False
-
-ALLOWED_HOSTS = ['localhost','34.125.150.76']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,9 +87,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
-# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

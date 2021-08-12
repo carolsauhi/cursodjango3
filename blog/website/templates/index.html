@@ -18,10 +18,10 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a href="#" class="image avatar"><img src="{% static 'images/avatar.jpg' %}" alt="Photo" /></a>
-					<h1><strong>Curso de Django 3</strong>, simplificando o desenvolvimento<br />
-					Do zero a nuvem.<br />
-					criado por <a href="http://html5up.net">HTML5 UP</a>.</h1>
+					<img src="{% static 'images/avatar.jpg' %}" class="image avatar" alt="" />
+					<h1><strong>Blog developed in Django 3</strong>, simplifying development<br />
+					From zero to cloud.<br />
+					Project available on <a href="https://github.com/carolsauhi/cursodjango3.git" target="blank">GitHub</a>.</h1>
 				</div>
 			</header>
 
@@ -31,12 +31,12 @@
 				<!-- One -->
 					<section id="one">
 						<header class="major">
-							<h2>Carolina Sauhi Gomes</h2>
+							<h2>Carol's Blog</h2>
 						</header>
 						<p>Application developer with experience in website development in NodeJS, Angular JS and Angular CLI, and development of scripts in Python for daily tasks, using databases in nuberm Cloudant, DB2 and MySQL.
 							Currently studying Django 3 to improve knowledge of Python with the Web.</p>
 						<ul class="actions">
-							<li><a href="https://www.linkedin.com/in/carolina-gomes/" target="_blank" class="button">Learn More</a></li>
+							<li><a href="https://www.linkedin.com/in/carolina-gomes/" target="blank" class="button">Learn More</a></li>
 						</ul>
 					</section>
 
@@ -46,9 +46,10 @@
 						<div class="row">
 							{% for post in posts %}
 								<article class="col-6 col-12-xsmall work-item">
-									<!-- <a href="{{ post.image.url }}" class="image fit thumb"> -->
 									{% if post.imagem %}
-										<img src="{{ post.imagem.url }}" alt="Post Image" class="image fit thumb"/>
+										<a href="{{ post.imagem.url }}" class="image fit thumb">
+											<img src="{{ post.imagem.url }}" alt="Post Image" class="image fit thumb"/>
+										</a>
 									{% else %}
 										<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb">
 											<img src="{% static 'images/fulls/01.jpg' %}" alt="Post Image">
@@ -64,15 +65,14 @@
 								</article>							
 							{% endfor %}
 						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
 					</section>
 
 				<!-- Three -->
 					<section id="three">
 						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<p>This blog was developed with the aim of learning Django 3.
+							It contains a simple template and database.
+							Feel free to send me a message :)!</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
 								<form method="post" action="{% url 'save_form' %}">
@@ -86,24 +86,6 @@
 									<input type="submit" value="Send Message" />									
 								</form>
 							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</section>
 
@@ -115,12 +97,11 @@
 				<div class="inner">
 					<ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/carolsauhi/"  target="blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:carol_sauhi@hotmail.com?Subject=Carol's Blog - Small Message" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Made with love ♡</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>

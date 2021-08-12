@@ -4,3 +4,6 @@ media
 **/__pycache__
 blog/blog/__pycache__
 blog/website/__pycache__
+db.sqlite3
+text.txt
+blog/blog/.env
